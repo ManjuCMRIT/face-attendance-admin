@@ -1,5 +1,7 @@
 import streamlit as st
 from auth import admin_login
+import sys
+sys.path.append(".")
 from pages import dashboard, create_class, upload_students, manage_classes, class_details
 
 st.set_page_config("Admin Dashboard", layout="wide")
