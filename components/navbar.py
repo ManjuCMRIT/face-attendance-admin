@@ -1,0 +1,27 @@
+import streamlit as st
+
+def navbar():
+
+    st.markdown("---")
+    col1, col2, col3, col4 = st.columns(4)
+
+    if col1.button("🏠 Home"):
+        st.session_state["page"] = "dashboard"
+        st.rerun()
+
+    if col2.button("➕ Create Class"):
+        st.session_state["page"] = "create_class"
+        st.rerun()
+
+    if col3.button("📂 Manage Classes"):
+        st.session_state["page"] = "manage_classes"
+        st.rerun()
+
+    if col4.button("📄 Upload Students"):
+        if "current_class" in st.session_state:
+            st.session_state["page"] = "upload_students"
+            st.rerun()
+        else:
+            st.warning("Select a class first in Manage Classes")
+    
+    st.markdown("---")
