@@ -1,8 +1,10 @@
 import streamlit as st
 import pandas as pd
 from utils.firebase_utils import db
+from components.navbar import navbar
 
 def show():
+    navbar()
     st.title("📄 Upload Student List")
 
     class_id = st.session_state.get("current_class")
