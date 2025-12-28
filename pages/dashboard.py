@@ -21,3 +21,4 @@ def show():
         if st.button("📂 Manage Existing Classes"):
             st.session_state["page"] = "manage_classes"
             st.rerun()'''
+
