@@ -23,5 +23,11 @@ def navbar():
             st.rerun()
         else:
             st.warning("Select a class first in Manage Classes")
+        # 🔗 new button for mapping embeddings
+    if col5.button("🔗 Map Embeddings"):
+        st.session_state["page"] = "map_embeddings"
+        st.rerun()
+
+
     
     st.markdown("---")
