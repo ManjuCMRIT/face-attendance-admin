@@ -1,10 +1,11 @@
 import streamlit as st
 from utils.firebase_utils import db
 from utils.constants import DEPARTMENTS
+from components.navbar import navbar
 
 def show():
     st.title("🏫 Create New Class")
-
+    navbar()
     dept = st.selectbox("Department", DEPARTMENTS)
     batch = st.text_input("Batch (Year of Admission)", "2024")
     section = st.text_input("Section", "A")
