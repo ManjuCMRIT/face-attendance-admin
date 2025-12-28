@@ -1,4 +1,11 @@
 import streamlit as st
+from components.navbar import navbar
+
+def show():
+    st.title("📊 Admin Dashboard")
+    navbar()
+
+'''import streamlit as st
 
 def show():
     st.title("📊 Admin Dashboard")
@@ -13,4 +20,4 @@ def show():
     with col2:
         if st.button("📂 Manage Existing Classes"):
             st.session_state["page"] = "manage_classes"
-            st.rerun()
+            st.rerun()'''
