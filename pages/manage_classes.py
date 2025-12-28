@@ -1,8 +1,9 @@
 import streamlit as st
 from utils.firebase_utils import db
-
+from components.navbar import navbar
 def show():
     st.title("📂 Manage Classes")
+    navbar()
 
     classes = db.collection("classes").stream()
 
