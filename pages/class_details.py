@@ -1,7 +1,8 @@
 import streamlit as st
 from utils.firebase_utils import db, bucket
-
+from components.navbar import navbar
 def show():
+    navbar()
     class_id = st.session_state.get("current_class")
     st.title(f"🏫 Class: {class_id}")
 
