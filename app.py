@@ -2,7 +2,7 @@ import streamlit as st
 from auth import admin_login
 import sys
 sys.path.append(".")
-from pages import dashboard, create_class, upload_students, manage_classes, class_details
+from pages import dashboard, create_class, upload_students, manage_classes, class_details, map_embeddings
 
 st.set_page_config("Admin Dashboard", layout="wide")
 
@@ -27,3 +27,6 @@ else:
         manage_classes.show()
     elif page == "class_details":
         class_details.show()
+    elif page == "map_embeddings":
+        map_embeddings.show()
+
